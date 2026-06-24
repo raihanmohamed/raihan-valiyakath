@@ -107,25 +107,7 @@ ul{list-style:none;}
   .nav-toggle{display:flex;}
 }
 
-/* ===== HERO ===== */
-.hero{
-  position:relative;
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  padding:140px 32px 80px;
-  max-width:1240px;
-  margin:0 auto;
-  overflow:hidden;
-}
-
-.hero-inner{
-  position:relative;
-  z-index:2;
-  max-width:660px;
-}
-
-/* PROFILE PHOTO (SINGLE CLEAN VERSION) */
+/* ===== HERO PHOTO (CLEAN STABLE VERSION) ===== */
 .hero-photo{
   position:absolute;
   right:5%;
@@ -145,7 +127,6 @@ ul{list-style:none;}
   box-shadow:0 20px 60px rgba(0,0,0,0.15);
 
   filter:contrast(1.08) grayscale(1);
-
   transition:transform 0.4s var(--ease);
 }
 
@@ -153,7 +134,20 @@ ul{list-style:none;}
   transform:scale(1.05);
 }
 
-/* MOBILE FIX (ONLY ONE VERSION — CLEAN) */
+/* MOBILE (ONLY ONE RULE — NO CONFLICTS) */
+@media(max-width:1080px){
+  .hero-photo{
+    position:static;
+    transform:none;
+    width:200px;
+    margin:30px auto 0;
+  }
+
+  .hero-photo img{
+    width:200px;
+    height:200px;
+  }
+}
 @media(max-width:1080px){
   .hero-photo{
     position:static;
